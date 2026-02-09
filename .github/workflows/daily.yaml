@@ -31,4 +31,6 @@ jobs:
 
           git add weather.csv
           git commit -m "daily weather log" || exit 0
-          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git
+
+          git pull --rebase https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git main
+          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git main
