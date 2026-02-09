@@ -27,7 +27,7 @@ jobs:
           TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           git config user.name "Animesh Kumar"
-          git config user.email "YOUR_VERIFIED_EMAIL"
+          git config user.email "animesh27k@gmail.com"
 
           git add weather.csv
           git commit -m "daily weather log" || exit 0
