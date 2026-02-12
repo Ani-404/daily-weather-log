@@ -121,3 +121,25 @@ python fetch_weather.py
 - Collect additional metrics such as humidity or pressure if the API provides them.
 
 ---
+
+
+
+## About the script
+
+`fetch_weather.py` features:
+- Retries with exponential backoff on network errors.
+- Creates header row if `weather.csv` does not exist.
+- Appends a single row per date: `date, time_observed_utc, temperature_c, windspeed_kmh, winddirection_deg`.
+- Safe to run manually or in GitHub Actions.
+
+---
+
+## License
+
+Provided as-is for learning and demonstration. Use freely for personal projects and interview demos.
+
+---
+
+## Repo
+
+https://github.com/Ani-404/daily-weather-log
