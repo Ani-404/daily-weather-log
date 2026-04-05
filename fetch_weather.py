@@ -11,6 +11,7 @@ weather = data["current_weather"]
 
 temp = weather["temperature"]
 wind = weather["windspeed"]
+code = weather["weathercode"]
 time = weather["time"]
 
 today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -21,8 +22,8 @@ with open("weather.csv", "a", newline="") as f:
     writer = csv.writer(f)
 
     if not file_exists:
-        writer.writerow(["date", "api_time", "temperature_C", "windspeed_kmh"])
+        writer.writerow(["date", "api_time", "temperature_C", "windspeed_kmh", "weathercode"])
 
-    writer.writerow([today, time, temp, wind])
+    writer.writerow([today, time, temp, wind, code])
 
 print("Logged:", today, temp)
